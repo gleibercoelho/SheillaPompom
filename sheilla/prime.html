@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pompom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    
+    </head>
+<body>
+    <div class="navigation">
+    <ul>
+        <li class="list">
+            <a href="index.html">
+                <span class="icon">
+                    <ion-icon name="game-controller-outline"></ion-icon>
+                </span>
+                <span class="text">Home</span>
+             
+            </a>
+        </li>
+        <li class="list">
+            <a href="live.html">
+                <span class="icon">
+                    <ion-icon name="logo-twitch"></ion-icon>
+                </span>
+                <span class="text">Live</span>
+             
+            </a>
+        </li>
+        <li class="list">
+            <a href="youtube.html">
+                <span class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </span>
+                <span class="text">Youtube</span>
+             
+            </a>
+        </li>
+        <li class="list active">
+            <a href="#">
+                <span class="icon">
+                    <i class="fi fi-ss-crown"></i>
+                </span>
+                <span class="text">Prime Gaming</span>
+             
+            </a>
+        </li>
+        <li class="list">
+            <a href="piltover.html">
+                <span class="icon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </span>
+                <span class="text">Academia De Piltover</span>
+             
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>    
+    </div>
+    <div class="primeGaming">
+        <img class="bannerPrime" src="content/desktop_hero_1x._CB1198675309_.jpg" alt="">        
+        <div class="containerPrime">
+            <h2 class="apoieHdois" >Apoie meu trabalho e a Live <br>com Prime Gaming</h2>
+        
+            <p class="textoPrime"> Beneficios do Prime: Assinatura de canal na Twitch, emoticons exclusivos, opções expandidas de cor de chat,
+            emblema de chat exclusivo membro prime, armazenamento de transmissão estendido. <br>
+            Cápsula Prime Gaming: incluindo 650 RP, (1) skin permanente de 1350 RP não possuída, 
+            200 essências laranjas, (5) fragmentos de campeão, 
+            (2) fragmentos fternos da Série 1 e (1) aumento de EXP de 30 dias.<br>
+            Resgates:<br>
+            Abril - em 31 de março de 2022 PT<br>
+            Maio - em 28 de abril de 2022 PT <br>           
+            As datas estão sujeitas a alterações.</p>
+        </div>
+        <a href="#" style="text-decoration: none;"><button>
+            <span>Experimente 30 dias Gratis</span>
+            <div class="liquid"></div>
+            <style>
+                
+            </style>
+          </button> </a>
+       
+        <img src="content/plants.png" alt="" class="trepadeiras">
+        <img src="content/cactus.png" alt="" class="cacto">
+        <img src="content/Design sem nome (1).gif" alt="" class="neon">
+        <img src="content/107761-primegaming2021-capsule-490px-article_m-1.webp" alt="" class="primeCapsula">
+
+    </div>
+    <footer class="footer">
+    
+        <ul class="rodapeLista">
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#"><ion-icon name="logo-instagram" size="large"></ion-icon></a>        
+            
+            </li>
+        
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
+                
+            </li>
+        
+            <li class="rodapeItem"> 
+                <a class="rodapeIcone" href="#"><ion-icon name="logo-discord" size="large"></ion-icon></a>
+                
+            </li>
+        
+            <li class="rodapeItem">
+                <a  class="rodapeIcone" href="#"><ion-icon name="logo-twitch" size="large"></ion-icon></a>
+                
+            </li>
+        
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#"><ion-icon name="logo-youtube" size="large"></ion-icon></a>
+                
+            </li>
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#">
+                    <ion-icon name="logo-tiktok" size="large"></ion-icon>
+                    </ion-icon>
+                </a>
+
+            </li>
+        </ul>
+    </footer>
+
+<script>
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    list.forEach((item) =>
+    item.addEventListener('click',activeLink));
+</script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
