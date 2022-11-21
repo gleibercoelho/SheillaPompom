@@ -1,0 +1,578 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,400;1,500&display=swap');
+@keyframes animacao
+{
+    0% {background-color: #ff6380; width: 0; height: 0vh; border-radius: 50%; border: 100px solid #58a2c0}
+    70% {background-color: #ff6380; width: 100vh; height: 100vh; border-radius: 50%; border:  100px solid #58a2c0}
+    90% {background-color: #ff6380; width: 100vh; height: 100vh; border-radius: 50%; border:  100px solid #58a2c0}
+    100% {background-color: #ff6380; width:100%; height: 100vh; border-radius: 0; border: 100x solid #58a2c0}
+    
+}
+
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+
+}
+:root 
+{
+ --clr: #f14262;
+}
+
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: var(--clr);
+position: relative;
+
+}
+.container
+{
+    width: 100%;
+    height: 100vh;
+    background-color:  #ff6380;
+    animation-name: animacao;
+    animation-duration: 0.9s;
+    z-index: 0;
+    
+}
+.navigation
+{
+    
+    width: 90%;
+    height: 70px;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: -34%;
+    margin-left: 5%;
+    animation-name: slide;
+    animation-delay: 3s; 
+       
+}
+
+.navigation ul 
+{
+    display: flex;
+    width: 350px;
+    
+}
+
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 2;    
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5;
+    color: var(--clr);    
+}
+.navigation ul li.active a .icon
+{
+    transform: translateY(-32px);
+}
+.navigation ul li a .text
+{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.navigation ul li.active a .text
+{
+    opacity: 1;
+    transform: translateY(10px);
+}
+.indicator
+{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #5ac3ec;
+    border-radius: 50%;
+    border: 6px solid #f14262;
+    transition: 0.5s;
+}
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 #f14262;
+}
+.indicator::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 #f14262;
+}
+.navigation ul li:nth-child(1).active ~ .indicator 
+{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator 
+{
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator 
+{
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator 
+{
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator 
+{
+    transform: translateX(calc(70px * 4));
+}
+
+.avatar
+{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    animation-name: shaking;
+    animation-duration: 2s;
+    animation-timing-function: 5;
+    top: 10%;
+    left: -8%;
+    animation: shaking 6s ease-in-out infinite;
+    z-index: 1;    
+}
+
+@keyframes shaking
+{
+   /* 0% { width: 0; height: 0vh;fill-opacity: 0;}
+    50% { width: 0; height: 0vh;fill-opacity: 0;}
+    100% {width:600px; height: 500px; fill-opacity: 1;} */
+    0%,100%{
+		
+		transform:translatey(0)
+	}
+	50%{
+		
+		transform:translatey(-20px)
+	}   
+}
+.circleOne
+{   
+    position: absolute;
+    background-color: #d053db;
+    width: 350px;
+    height: 350px;
+    border-top-left-radius: 90%;
+    border-bottom-left-radius: 75%;
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 90%;
+    top: 40%;
+    left: -10%;
+    z-index: -1;
+    animation-name: shaking;
+    animation: shaking 6s ease-in-out infinite;
+    animation-duration: 5s;    
+}
+
+.circleTwo
+{   position: absolute;
+    background-color: #58a2c0;
+    width: 175px;
+    height: 175px;
+    border-top-left-radius: 45%;
+    border-bottom-left-radius: 90%;
+    border-top-right-radius: 120%;
+    border-bottom-right-radius: 75%;
+    top: 90%;
+    left: 50%;
+    z-index: -1;
+    animation-name: shaking;
+    animation: shaking 6s ease-in-out infinite;
+    animation-duration: 3s;
+}
+.circleThree
+{   position: absolute;
+    background-color: #d3d7d8;
+    width: 405px;
+    height: 400px;
+    border-top-left-radius: 45%;
+    border-bottom-left-radius: 90%;
+    border-top-right-radius: 120%;
+    border-bottom-right-radius: 75%;
+    top: 10%;
+    left: 80%;
+    z-index: -1;
+    animation-name: shaking;
+    animation: shaking 6s ease-in-out infinite;
+    animation-duration: 4s;
+}
+.logo
+{
+    position: absolute;
+    left: 35%;
+    top: 0%;
+    z-index: -1;
+    animation-name: shaking;
+    animation: shaking 6s ease-in-out infinite;
+    animation-duration: 3s;
+
+}
+.titulo
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 32%;
+    color: #fff;
+}
+.twicht
+{
+    position: absolute;
+    top: 30%;
+    left: 16%;
+}
+
+.youtube
+{
+    position: absolute;
+    top: 30%;
+    left: 16%;
+}
+.prime  
+{
+    position: absolute;
+    top: -23%;
+    z-index: -1;
+    left: -23%;
+    transform: rotate(-45deg);
+    width: 250px;
+    height: 250px;
+}
+.neon  
+{
+    position: absolute;
+    top: -5%;
+    z-index: -1;
+    left: -20%;
+    transform: rotate(-15deg);
+    width: 250px;
+    height: 250px;
+    z-index: -2;
+}
+.ghost
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: -17%;
+    top: 82%
+}
+.invaders
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: -15%;
+    bottom: 40%;
+}
+.arcade
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: -20%;
+    top: -10%; 
+
+}
+
+.gameboy
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: -20%;
+    top: 30%;
+    transform: rotate(-15deg)
+}
+.tamogotchi
+{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: -15%;
+    bottom: 5%;
+    transform: rotate(5deg);
+}
+.primeGaming
+{
+    position: absolute;
+    width: 954px;
+    height: 450px;
+}
+.bannerPrime
+{
+    position: absolute;
+    width: 954px;
+    height: 450px;
+    top: 21%;
+    left: 1.5%;
+    z-index: -1;
+}
+.containerPrime
+{
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    z-index: 1;
+    color: #d3d7d8;
+    text-shadow: 1px 1px 2px black;
+}
+.textoPrime
+{
+    color: #d3d7d8;
+    font-size: 18px;
+    text-align: justify;
+    padding-top: 2%;
+}
+
+/* From cssbuttons.io by @westitan */
+button {
+    position: relative;
+    padding: 19px 36px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 40px;
+    border: none;
+    top: 100%;
+    right: -50%;
+    cursor: pointer;
+   }
+   
+   button span {
+    position: relative;
+    color: #fff;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+   }
+   
+   button .liquid {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: .5s;
+   }
+   
+   button .liquid::after,
+   button .liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #fff;
+   }
+   
+   button .liquid::before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+   }
+   
+   button .liquid::after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, .5);
+    animation: animate 10s linear infinite;
+   }
+   
+   button:hover .liquid {
+    top: -120px;
+   }
+   
+   @keyframes animate {
+    0% {
+     transform: translate(-50%, -75%) rotate(0deg);
+    }
+   
+    100% {
+     transform: translate(-50%, -75%) rotate(360deg);
+    }
+   }
+   .trepadeiras
+   {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: -18%;
+    top: 4%; 
+    z-index: -1;
+   }
+   .cacto
+   {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: -20%;
+    bottom: -23%;
+   }
+.primeCapsula
+{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: -30%;
+    top: 34%;
+}
+
+.piltoverLogo
+{
+    position: absolute;
+    left: -20%;
+    top: -15%;
+}
+
+.textoHdois
+{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    font-size: 20px;
+    color: #d3d7d8;
+    text-shadow: 1px 1px 2px black;
+}
+.textoParagrago
+{
+    margin-top: 5%;
+    text-align: justify;
+    color: #d3d7d8;
+    text-shadow: 1px 1px 2px black;
+    
+}
+.secador
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: 2%;
+    top: 20%;
+}
+.heart
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 5%;
+    bottom: 0%;
+}
+.cupcake
+{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: 2%;
+    bottom: 0%;
+    transform: rotate(-15deg);
+}
+.footer
+{
+
+position: absolute;
+background-color: #5ac3ec;
+width: 100%;
+height: 39px;
+bottom: -19%;
+min-width: 100vh;
+
+
+}
+.rodapeLista
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: baseline; 
+
+}
+.rodapeItem
+{   
+    list-style: none;    
+    text-decoration: none;
+    
+}
+
+.rodapeItem a:link, a:visited {
+	text-decoration: none;
+    color: rgb(243, 230, 238)
+    
+	}
+.rodapeItem a:hover {
+	text-decoration: underline;
+	color: var(--clr)
+	}
+.rodapeItem a:active {
+	text-decoration: none;
+    color: var(--clr)
+	}
+
+.tristana {
+    width: 409.px;
+    height: 376px;
+    position: absolute;
+    bottom: -15%;
+    right: 0%;
+}
