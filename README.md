@@ -1,2 +1,2 @@
 # SheillaPompom
-Streamer from twitch website
+Streamer oficial website from twitch. 
