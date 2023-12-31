@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pompom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="game-controller-outline"></ion-icon>
+                    </span>
+                    <span class="text">Home</span>
+
+                </a>
+            </li>
+            <li class="list">
+                <a href="live.html">
+                    <span class="icon">
+                        <ion-icon name="logo-twitch"></ion-icon>
+                    </span>
+                    <span class="text">Live</span>
+
+                </a>
+            </li>
+            <li class="list">
+                <a href="youtube.html">
+                    <span class="icon">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </span>
+                    <span class="text">Youtube</span>
+
+                </a>
+            </li>
+            <li class="list">
+                <a href="prime.html">
+                    <span class="icon">
+                        <i class="fi fi-ss-crown"></i>
+                    </span>
+                    <span class="text">Prime Gaming</span>
+
+                </a>
+            </li>
+            <li class="list">
+                <a href="piltover.html">
+                    <span class="icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="text">Academia De Piltover</span>
+
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    <div class="home">
+        <img src="content/Logotipo 500x500  px..png" alt="" class="avatar">
+        <img src="content/Logotipo 500x500  px. (2).png" alt="" class="logo">
+        <img src="content/hextech_tristana_skin_by_uhmtaongon_depsgjr-fullview.png" alt="" class="tristana">
+        
+        <h1 class="titulo">Streamer de League Of Legends e +<br> Live toda Sex, Sab e Domingo 20h</h1>
+        <div class="circleOne"></div>
+        <div class="circleTwo"></div>
+        <div class="circleThree"></div>
+
+    </div>
+    <footer class="footer">
+
+        <ul class="rodapeLista">
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#">
+                    <ion-icon name="logo-instagram" size="large"></ion-icon>
+                </a>
+
+            </li>
+
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#">
+                    <ion-icon name="logo-twitter" size="large"></ion-icon>
+                </a>
+
+            </li>
+
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#">
+                    <ion-icon name="logo-discord" size="large"></ion-icon>
+                </a>
+
+            </li>
+
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#">
+                    <ion-icon name="logo-twitch" size="large"></ion-icon>
+                </a>
+
+            </li>
+
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#">
+                    <ion-icon name="logo-youtube" size="large"></ion-icon>
+                </a>
+
+            </li>
+            <li class="rodapeItem">
+                <a class="rodapeIcone" href="#">
+                    <ion-icon name="logo-tiktok" size="large"></ion-icon>
+                    </ion-icon>
+                </a>
+
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+            item.addEventListener('click', activeLink));
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
